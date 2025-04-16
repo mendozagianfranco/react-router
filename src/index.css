@@ -20,3 +20,7 @@ a.active {
     color: #0a58ca;
     text-decoration: underline;
 }
+
+.card-post {
+    margin-bottom: 20px;
+}
