@@ -1,5 +1,6 @@
 import axios from 'axios';
 import { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 
 export default function Posts() {
     const [postsData, setPostsData] = useState([]);
@@ -19,6 +20,7 @@ export default function Posts() {
             {postsData.map(post => <div className='card-post' key={post.id}>
                 <h2>{post.title}</h2>
                 <p>{post.body}</p>
+                <Link to={`/posts/${post.id}`}>ID del post: {post.id}</Link>
             </div>)}
         </>
     );
